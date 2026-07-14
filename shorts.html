@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watch BharatVideo Shorts – quick, vertical videos from India's top creators.">
+  <title>Shorts – BharatVideo</title>
+  <meta name="theme-color" content="#FF5722">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════
+       LOGIN DIALOG
+       ═══════════════════════════════════ -->
+  <div id="login-dialog" class="dialog-overlay" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
+    <div class="dialog-box">
+      <button id="dlg-close" class="dialog-close-btn" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <p class="dialog-logo">Bharat<span>Video</span></p>
+      <div class="dialog-icon-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <h2 class="dialog-title" id="dlg-title">Sign in to continue</h2>
+      <p  class="dialog-body"  id="dlg-text">Create a free BharatVideo account to access all features.</p>
+      <div class="dialog-actions">
+        <a href="login.html"       class="d-btn-primary">Sign In</a>
+        <a href="get-started.html" class="d-btn-secondary">Create Account – It's Free</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════
+       SIDEBAR
+       ═══════════════════════════════════ -->
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation">
+    <div class="sb-section">
+      <a href="index.html" class="sb-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span class="item-label">Home</span>
+      </a>
+      <a href="shorts.html" class="sb-item active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        <span class="item-label">Shorts</span>
+      </a>
+      <a href="#" class="sb-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <span class="item-label">Trending</span>
+      </a>
+    </div>
+
+    <div class="sb-divider"></div>
+
+    <div class="sb-section">
+      <p class="sb-section-label">Your Library</p>
+      <button class="sb-item" data-auth="subscribe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4H2v16h20V4z"/><path d="M22 4l-10 9L2 4"/></svg>
+        <span class="item-label">Subscriptions</span>
+      </button>
+      <button class="sb-item" data-auth="history">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="item-label">History</span>
+      </button>
+      <button class="sb-item" data-auth="like">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span class="item-label">Liked Videos</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="nav-left">
+      <button id="hamburger" class="hamburger" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo" aria-label="BharatVideo – Home">
+        <span class="logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="logo-text">Bharat<span>Video</span></span>
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <div class="search-wrap" role="search">
+        <label for="main-search" class="sr-only">Search BharatVideo</label>
+        <div class="search-suggest-wrap">
+          <input id="main-search" type="search" class="search-input" placeholder="Search Shorts…" autocomplete="off" aria-label="Search BharatVideo" aria-autocomplete="list" aria-controls="suggest-dropdown">
+          <div id="suggest-dropdown" class="suggest-dropdown" role="listbox" aria-label="Search suggestions"></div>
+          <button id="search-clear" class="search-clear" aria-label="Clear search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <button class="search-btn" aria-label="Submit search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+      <button class="search-close" aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <nav class="nav-right" aria-label="User actions">
+      <button id="mobile-search-btn" class="mobile-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-icon-btn" data-auth="upload" aria-label="Upload video">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </button>
+      <button class="nav-icon-btn" data-auth="notif" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="notif-badge" aria-label="3 notifications">3</span>
+      </button>
+      <a href="login.html"       class="btn-login"  aria-label="Sign in">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Sign In
+      </a>
+      <a href="get-started.html" class="btn-signup" aria-label="Create account"><span class="btn-signup-text">Sign Up</span></a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════
+       SHORTS CONTENT
+       ═══════════════════════════════════ -->
+  <div class="main-wrap">
+    <main class="shorts-page-wrap" id="main-feed">
+
+      <header class="shorts-page-head">
+        <div class="shorts-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <h1 class="shorts-page-title">Shorts</h1>
+      </header>
+
+      <div id="shorts-grid" class="shorts-grid" role="list" aria-label="BharatVideo Shorts">
+        <!-- Populated by script.js initShortsPage() -->
+      </div>
+
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <p class="footer-credit-line">
+        Made with ❤️ in India &nbsp;·&nbsp; Created by
+        <a href="https://www.instagram.com/faiizanaly/" target="_blank" rel="noopener noreferrer" class="creator-link" aria-label="Visit Faizan Ali on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Faizan Ali
+        </a>
+      </p>
+      <p class="footer-copy-line">&copy; 2026 BharatVideo Pvt. Ltd.</p>
+    </footer>
+  </div><!-- /main-wrap -->
+
+  <script src="script.js"></script>
+
+  <!-- Back to Top -->
+  <button id="btt-btn" class="btt-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+</body>
+</html>

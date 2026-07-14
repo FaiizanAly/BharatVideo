@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to BharatVideo to like, comment, subscribe, and upload your own videos.">
+  <title>Sign In – BharatVideo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="auth-page">
+
+  <!-- Navbar (minimal) -->
+  <header class="auth-navbar">
+    <a href="index.html" class="logo" aria-label="BharatVideo – Go to homepage">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+      <span class="logo-text">Bharat<span>Video</span></span>
+    </a>
+  </header>
+
+  <!-- Auth Body -->
+  <main class="auth-body">
+    <div class="auth-card">
+
+      <a href="index.html" class="auth-logo" aria-label="BharatVideo">
+        Bharat<span>Video</span>
+      </a>
+
+      <h1 class="auth-title">Welcome back</h1>
+      <p  class="auth-sub">Sign in to continue watching</p>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" novalidate>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              class="form-input has-btn"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+            <button
+              type="button"
+              class="input-action"
+              data-pw-toggle="password"
+              aria-label="Show password"
+            ></button>
+          </div>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Options row -->
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember-me" aria-label="Remember me">
+            Remember me
+          </label>
+          <a href="forgot-password.html" class="link-accent">Forgot password?</a>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit" id="login-submit">
+          <span class="btn-label">Sign In</span>
+          <span class="btn-spinner" aria-hidden="true"><span class="spinner"></span></span>
+        </button>
+
+      </form>
+
+      <p class="auth-footer-text">
+        Don't have an account?
+        <a href="get-started.html" class="link-accent">Create one free</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

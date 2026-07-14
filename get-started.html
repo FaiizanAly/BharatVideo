@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a free BharatVideo account and start watching, learning, and creating in your own language.">
+  <title>Create Account – BharatVideo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="auth-page">
+
+  <!-- Navbar (minimal) -->
+  <header class="auth-navbar">
+    <a href="index.html" class="logo" aria-label="BharatVideo – Go to homepage">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+      <span class="logo-text">Bharat<span>Video</span></span>
+    </a>
+  </header>
+
+  <!-- Auth Body -->
+  <main class="auth-body">
+    <div class="auth-card">
+
+      <a href="index.html" class="auth-logo" aria-label="BharatVideo">
+        Bharat<span>Video</span>
+      </a>
+
+      <h1 class="auth-title">Create your account</h1>
+      <p  class="auth-sub">Join India's own video platform — it's free</p>
+
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" novalidate>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullname">Full name</label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="fullname"
+              class="form-input"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            >
+          </div>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Create a password</label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              class="form-input has-btn"
+              placeholder="Min 8 chars, letter, number & symbol"
+              autocomplete="new-password"
+              required
+            >
+            <button
+              type="button"
+              class="input-action"
+              data-pw-toggle="password"
+              aria-label="Show password"
+            ></button>
+          </div>
+          <p class="field-error" role="alert"></p>
+          <!-- Password strength meter -->
+          <div id="pw-strength" class="pw-strength" aria-live="polite">
+            <div class="strength-bars">
+              <div class="s-bar"></div>
+              <div class="s-bar"></div>
+              <div class="s-bar"></div>
+              <div class="s-bar"></div>
+            </div>
+            <span class="strength-text">Strength: <strong id="strength-text"></strong></span>
+          </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-input has-btn"
+              placeholder="Repeat your password"
+              autocomplete="new-password"
+              required
+            >
+            <button
+              type="button"
+              class="input-action"
+              data-pw-toggle="confirm-password"
+              aria-label="Show password"
+            ></button>
+          </div>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Account Type -->
+        <div class="form-group">
+          <label for="accountType">Account type</label>
+          <select id="accountType" class="form-select" required>
+            <option value="">Select account type</option>
+            <option value="viewer">Viewer – Watch &amp; Learn</option>
+            <option value="creator">Creator – Upload Videos</option>
+          </select>
+          <p class="field-error" role="alert"></p>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit" id="signup-submit">
+          <span class="btn-label">Create Account</span>
+          <span class="btn-spinner" aria-hidden="true"><span class="spinner"></span></span>
+        </button>
+
+      </form>
+
+      <p class="auth-footer-text">
+        Already have an account?
+        <a href="login.html" class="link-accent">Sign in</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

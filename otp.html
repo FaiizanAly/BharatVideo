@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verify your BharatVideo account with the one-time code sent to your email.">
+  <title>Verify OTP – BharatVideo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="auth-page">
+
+  <!-- Navbar (minimal) -->
+  <header class="auth-navbar">
+    <a href="index.html" class="logo" aria-label="BharatVideo – Go to homepage">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+      <span class="logo-text">Bharat<span>Video</span></span>
+    </a>
+  </header>
+
+  <!-- Auth Body -->
+  <main class="auth-body">
+    <div class="auth-card">
+
+      <a href="index.html" class="auth-logo" aria-label="BharatVideo">
+        Bharat<span>Video</span>
+      </a>
+
+      <!-- Email icon -->
+      <div style="display:flex; justify-content:center; margin-bottom:16px;">
+        <div style="width:56px; height:56px; background:var(--brand-light); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="auth-title">Check your email</h1>
+
+      <!-- OTP FORM -->
+      <div class="otp-box">
+        <p class="otp-hint">
+          We sent a 6-digit code to<br>
+          <strong>your registered email address</strong>.<br>
+          Enter it below to verify your account.
+        </p>
+
+        <form id="otpForm" novalidate>
+          <!-- OTP inputs -->
+          <div class="otp-inputs" role="group" aria-label="Enter the 6-digit verification code">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 1">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 2">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 3">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 4">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 5">
+            <input type="text" inputmode="numeric" pattern="\d" maxlength="1" class="otp-digit" aria-label="Digit 6">
+          </div>
+
+          <!-- Countdown timer -->
+          <div id="otp-timer-row" class="otp-timer" aria-live="polite">
+            <span>Code expires in</span>
+            <span class="countdown-val" id="countdown">2:00</span>
+          </div>
+
+          <!-- Resend button -->
+          <button type="button" id="resend-btn" class="resend-btn" aria-label="Resend verification code">
+            Didn't receive it? Resend code
+          </button>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-submit" id="otp-submit">
+            <span class="btn-label">Verify &amp; Continue</span>
+            <span class="btn-spinner" aria-hidden="true"><span class="spinner"></span></span>
+          </button>
+
+        </form>
+      </div>
+
+      <p class="auth-footer-text">
+        Wrong email?
+        <a href="get-started.html" class="link-accent">Go back</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
